@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: "gilroy";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+}
+
+#back{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+    pointer-events: none;
+}
+#workingarea{
+    width: 80%;
+    height: 100vh;
+    max-width: 1920px;
+    /* background-color: grey; */
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    position: relative;
+}
+#nav{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#nav img{
+    height: 60px;
+}
+#nleft,#nright{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#nav a{
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    /* letter-spacing: 1px; */
+    color: white;
+    font-family: "gilroy";
+}
+
+#hero{
+    position:absolute;
+    top: 50%;
+    left: 0;
+    display:flex ;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: red; */
+    justify-content: space-between;
+    transform: translate(0%,-50%);
+
+}
+
+#heroleft{
+   min-width: 50%;
+    /* height: 100px; */
+    /* background-color: yellow; */
+
+}
+
+#heroleft .elem{
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+
+}
+#heroleft .elem h1:nth-child(1){
+top: 0;
+}
+#heroleft .elem h1{
+    position: absolute;
+    font-family: "kajiro";
+    color: white;
+    font-weight: 100;
+    font-size: 10vw;
+    line-height: .9;
+    top: 100%;
+    left: 0;
+ }
+#heroleft button{
+    padding: .8vw 2vw;
+    font-size: 2vw;
+    margin-top: 3vw;
+    font-family: "kajiro";
+    pointer-events: all;
+ }
+
+ #heroright{
+    width: 17%;
+    color: aliceblue;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+ }
+
+#heroright p{
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+}
+
+#heroright #imagediv{
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(https://media.istockphoto.com/id/1249727310/photo/portrait-of-a-cheering-little-boy.jpg?s=1024x1024&w=is&k=20&c=_yK9SjxSCd8nm37WiduiZ3RWs-INyBRQLdR0cMz1ges=);
+    background-size: cover;
+    background-position: right;
+    
+}
+
+
