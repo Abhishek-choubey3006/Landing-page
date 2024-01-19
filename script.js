@@ -9,20 +9,54 @@ elems.forEach(function (elem) {
     document.querySelector("#main").addEventListener("click", function () {
         if (!animating) {
             animating = true;
-            gsap.to(h1s[index], {
-                top: " -= 100%",
+            gsap.to(h1s[index],{
+                top: "-=100%",
                 ease: Expo.easeInOut,
                 duration: 1,
                 onComplete: function () {
-                    gsap.set(elem, { top: "100%" }); // Use 'elem' instead of 'this'
+                    gsap.set(h1s[index], { top: "100%" }); // Use 'elem' instead of 'this'
+                   
+                    animating = false; // Reset animating flag
+                    // index == h1s.length - 1 ? index = 0 : index++;
                 },
+                
             });
-            index === h1s.length - 1 ? index = 0 : index++;
+            index == h1s.length - 1 ? index = 0 : index++;
             gsap.to(h1s[index], {
-                top: ' -= 100%',
+                top: "-=100%",
                 ease: Expo.easeInOut,
                 duration: 1,
             });
         }
     });
 });
+// var elems = document.querySelectorAll(".elem");
+// elems.forEach(function (elem) {
+//     var h1s = elem.querySelectorAll("h1")
+//     var index = 0;
+//     var animating = false;
+//     document.querySelector("#main").addEventListener("click", function () {
+
+//         if (!animating) {
+//             animating = true;
+            
+//             gsap.to(h1s[index], {
+//                 top: "-=100%",
+//                 ease: Expo.easeInOut,
+//                 duration: 1,
+//                 onComplete: function () {
+//                     gsap.set(h1s[index], { top: "100%" }); // Use 'h1s' instead of 'elem_target'
+//                     animating = false; // Reset animating flag
+//                 },
+//             });
+
+//             index == h1s.length - 1 ? index = 0 : index++;
+            
+//             gsap.to(h1s[index], {
+//                 top: "-=100%",
+//                 ease: Expo.easeInOut,
+//                 duration: 1,
+//             });
+//         }
+//     });
+// });
